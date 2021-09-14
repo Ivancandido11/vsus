@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Lobby.create(title: "First Lobby", rank: 20, is_full: true)
+
+Player.create(lobby_id: 1, name: "ZasD", points: 100, password: "1234", in_lobby: true)
+Player.create(lobby_id: 1, name: "Moca", points: 10, password: "1234", in_lobby: true)
+Player.create(lobby_id: 1, name: "BackPack", points: 20, password: "1234", in_lobby: true)
+Player.create(lobby_id: 1, name: "Socks", points: 0, password: "1234", in_lobby: true)

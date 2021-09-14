@@ -1,0 +1,198 @@
+.main {
+  grid-area: main;
+  background: #9A7AA0;
+  list-style-type: none;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.mainGamePage {
+  grid-area: main;
+  background: #9A7AA0;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.divTable {
+  width: 100%;
+  height: 665px;
+  overflow: scroll;
+}
+
+.lobbyTable {
+  width: 100%;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #9A7AA0;
+}
+
+tr, th, td {
+  border-bottom: 1px solid #F5F5F5;
+  border-collapse: collapse;
+  height: 25px
+}
+
+.lobbies:nth-child(even) {
+  background-color: #87677B;
+}
+
+.lobbies:hover {
+  background-color: #FFBE0B;
+}
+
+.app-logo {
+  grid-area: header;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.logo {
+  justify-content: center;
+}
+
+.nav {
+  grid-area: sidebar;
+  background: #778472;
+  max-height: 100px;
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.nav-menu {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.nav-menu:hover {
+  background-color: #FFBE0B;
+  border-radius: 25px;
+  color: black;
+}
+
+.App {
+  font-family: 'Acme', sans-serif;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #F5F5F5;
+  display: grid;
+  grid-template-columns: 200px 100px auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "sidebar . main main"
+    "footer footer footer footer";
+  row-gap: 15px;
+}
+
+.board {
+  height: 600px;
+  width: 800px;
+  grid-area: board;
+}
+
+.player1 {
+  grid-area: player1;
+  text-align: center;
+}
+
+.player2 {
+  grid-area: player2;
+  max-width: fit-content;
+  min-width: 100px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.player3 {
+  grid-area: player3;
+  max-width: fit-content;
+  min-width: 100px;
+  text-align: center;
+  padding-left: 10px;
+}
+
+.player4 {
+  grid-area: player4;
+  text-align: center;
+}
+
+.title {
+  grid-area: title;
+  text-align: center; 
+  width: fit-content;
+}
+
+.rank {
+  grid-area: rank;
+  text-align: center;  
+}
+
+.user {
+  grid-area: user;
+  text-align: center;    
+}
+
+.gamePage {
+  display: grid;
+  grid-template-columns: auto 400px 400px auto;
+  grid-template-rows: 50px 50px auto 50px;
+  grid-template-areas: 
+    ". title rank user"
+    ". player1 player1 ."
+    "player2 board board player3"
+    ". player4 player4 .";
+  row-gap: 15px;
+  grid-area: main;
+  place-items: center
+}
+
+button, .button {
+  font-family: 'Acme', sans-serif;
+  background-color: #778472;
+  border-radius: 25px;
+  height: 40px;
+}
+
+button:hover, .button:hover {
+  background-color: #FFBE0B;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.input {
+  font-family: 'Acme', sans-serif;
+  background-color: #F5F5F5;
+  border-radius: 25px;
+  padding: 4px;
+  height: 30px;
+}
+
+.leaderboardOl {
+  padding-left: 100px;
+  padding-right: 100px;
+  place-items: center;
+}
+
+li {
+  padding-top: 5px;
+  border-bottom: 1px solid #F5F5F5;
+  border-collapse: collapse;
+  height: 65px;
+}
+
+li::marker {
+  font-size: 1.2em;
+}
