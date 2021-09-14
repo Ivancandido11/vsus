@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import Adapter from "../Adapter"
 
 const CreateAccount = ({ onCreateSubmit, users }) => {
   const [showPassword, setShowPassword] = useState(false)
@@ -8,9 +9,17 @@ const CreateAccount = ({ onCreateSubmit, users }) => {
     password: "",
     points: 0,
     lobby_id: null,
-    in_lobby: false
+    in_lobby: true
   })
-
+  
+  useEffect(() => {
+    Adapter.homeLobby()
+    .then(home => {
+      setUserInfo({ ...userInfo, lobby_id: home.id})
+    })
+    // eslint-disable-next-line
+  }, []) 
+  
   const handleUserChange = (e) => {
     const key = e.target.name
     const value = e.target.value
@@ -27,7 +36,7 @@ const CreateAccount = ({ onCreateSubmit, users }) => {
         password: "",
         points: 0,
         lobby_id: null,
-        in_lobby: false
+        in_lobby: true
       })
     } else if (users.find(user => user.name.toLowerCase() === userInfo.name.toLowerCase())) {
       const existingUser = users.find(user => user.name.toLowerCase() === userInfo.name.toLowerCase())

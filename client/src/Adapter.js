@@ -81,6 +81,11 @@ class Adapter {
     return fetch(`${playerURL}/${id}`, configObj)
       .then(r => r.json())
   }
+
+  static homeLobby () {
+    return fetch("/home_lobby")
+      .then(r => r.json())
+  }
 }
 
 export default Adapter
